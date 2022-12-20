@@ -1,3 +1,12 @@
 import React, { Component } from "react";
 
-export default Body_Feed;
+class BodyFeed extends Component {
+    render() {
+        // let post = props.post
+        return <div className="app-feed">
+
+        </div>;
+    }
+}
+
+export default BodyFeed;

@@ -1,7 +1,13 @@
 import React, { Component } from "react";
 
-class App_Header extends Component {
-    render() {}
+class AppHeader extends Component {
+    render() {
+        return (
+            <header>
+                <h1>Hi, this is a test!</h1>
+            </header>
+        );
+    }
 }
 
-export default App_Header;
+export default AppHeader;

@@ -1,11 +1,16 @@
 import React, { Component } from "react";
+import BodyFeed from "./Body_Feed";
+import BodySidebar from "./Body_Sidebar";
 
-class App_Body extends Component{
-    render(){
-        <div className="app-body">
-            
-        </div>
+class AppBody extends Component {
+    render() {
+        return (
+            <div className="app-body">
+                <BodySidebar />
+                <BodyFeed />
+            </div>
+        );
     }
 }
 
-export default App_Body;
+export default AppBody;
