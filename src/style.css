@@ -54,11 +54,27 @@ li{
 	flex: 1;
 }
 .app-feed{
-    width: 80%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
+    
+    gap: 1rem;
+    width: 80%;
     padding: 0 1.5rem;
     margin-top: 0.5rem;
+}
+.feed-card{
+    width: 80%;
+    height: 6rem;
+    padding: 1rem;
+    border-radius: 5px;
+
+    background-color: whitesmoke;
+
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    overflow-y: hidden;
 }
 
 footer{
