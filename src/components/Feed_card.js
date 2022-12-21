@@ -1,17 +1,33 @@
 import React, { Component } from "react";
 
 class FeedCard extends Component {
-    constructor(props){
-        super(props)
+    constructor(props) {
+        super();
+        this.description = props.description;
+        this.state = {
+            title: props.title,
+        };
     }
-    render(){
+    showText() {
+        setTimeout(() => {
+            this.setState({
+                title: this.state.title = "ouch",
+            });
+        }, 3000)
+    }
+    render() {
         return (
-            <div className="feed-card">
-                <h2>{this.props.title}</h2>
-                <p>{this.props.description}</p>
+            <div
+                className="feed-card"
+                onClick={() => {
+                    this.showText();
+                }}
+            >
+                <h2>{this.state.title}</h2>
+                <p>{this.description}</p>
             </div>
-        )
+        );
     }
 }
 
-export default FeedCard
+export default FeedCard;
