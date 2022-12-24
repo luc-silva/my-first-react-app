@@ -3,8 +3,15 @@ import BodyFeed from "./Body_Feed";
 import BodySidebar from "./Body_Sidebar";
 
 class AppBody extends Component {
+    constructor(props) {
+        super(props);
+
+
+    }
+
     render() {
         let thisUser = {
+            user: this.props.user,
             posts: [
                 {
                     title: "This is a post... ok?",
@@ -25,7 +32,7 @@ class AppBody extends Component {
         };
         return (
             <div className="app-body">
-                <BodySidebar />
+                <BodySidebar changeUser={this.props.changeUser.bind(this)}/>
                 <BodyFeed user={thisUser} />
             </div>
         );

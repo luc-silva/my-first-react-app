@@ -8,7 +8,7 @@ class BodyFeed extends Component {
     render() {
         let posts = this.props.user.posts
         return <div className="app-feed">
-            {posts.map((post, index) => <FeedCard key={index} title={post.title} description={post.description}/>)}
+            {posts.map((post, index) => <FeedCard key={index} user={this.props.user.user} title={post.title} description={post.description}/>)}
         </div>;
     }
 }

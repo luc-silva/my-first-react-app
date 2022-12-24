@@ -11,9 +11,9 @@ class FeedCard extends Component {
     showText() {
         setTimeout(() => {
             this.setState({
-                title: this.state.title = "ouch",
+                title: (this.state.title = "ouch"),
             });
-        }, 3000)
+        }, 3000);
     }
     render() {
         return (
@@ -24,6 +24,7 @@ class FeedCard extends Component {
                 }}
             >
                 <h2>{this.state.title}</h2>
+                <em>{this.props.user}</em>
                 <p>{this.description}</p>
             </div>
         );
